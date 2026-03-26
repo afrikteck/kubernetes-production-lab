@@ -10,6 +10,32 @@ Infrastructure Kubernetes automatisée avec K3s, Traefik et Longhorn.
   - kubctl1 (192.168.1.100) 
   - kubctl2 (192.168.1.99)
 
+## Structure du Repository
+
+### 📁 master-192.168.1.102/
+- **`deploy-k3s.sh`** ⭐ : Script principal d'installation du master (K3s + Traefik + Longhorn + Portainer)
+- **`check-cluster.sh`** : Vérification de l'état du cluster (nodes, pods, services)
+- **`test-apps.sh`** : Déploiement et test de l'application whoami
+- **`ingress-routes.yaml`** : Configuration des routes Traefik (dashboard, longhorn)
+- **`whoami-k3s.yaml`** : Manifeste de l'application de test whoami
+- **`whoami-test.yaml`** : Version alternative du manifeste whoami
+
+### 📁 worker1-192.168.1.101/
+- **`deploy-k3s.sh`** ⭐ : Script d'installation du worker 1 (avec prérequis Longhorn)
+
+### 📁 worker2-192.168.1.100/
+- **`deploy-k3s.sh`** ⭐ : Script d'installation du worker 2 (avec prérequis Longhorn)
+
+### 📁 worker3-192.168.1.99/
+- **`deploy-k3s.sh`** ⭐ : Script d'installation du worker 3 (avec prérequis Longhorn)
+
+### 📁 Racine
+- **`README.md`** : Cette documentation
+- **`DEPLOYMENT.md`** : Guide de déploiement détaillé
+- **`.gitignore`** : Exclusions Git (fichiers sensibles)
+- **`init-git.sh`** : Script d'initialisation du repository Git
+- **`clean-repo.sh`** : Script de nettoyage du repository
+
 ## Fonctionnalités
 
 - ✅ Cluster K3s haute disponibilité
@@ -50,8 +76,8 @@ cd worker3-192.168.1.99/
 
 ### 4. Vérification (sur le master)
 ```bash
-./check-cluster.sh
-./test-apps.sh
+./check-cluster.sh    # Vérifier l'état du cluster
+./test-apps.sh        # Déployer et tester l'application whoami
 ```
 
 ## Services disponibles
