@@ -1,0 +1,12 @@
+# Fichiers temporaires
+/tmp/
+*.tmp
+*.log
+
+# Fichiers de configuration sensibles
+*.env
+**/tokens.txt
+
+# Fichiers Kubernetes générés
+**/admin.conf
+**/k3s.yaml
