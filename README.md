@@ -19,8 +19,10 @@ cd worker3-192.168.1.99/ && ./deploy-k3s.sh
 
 ## 📋 Documentation
 
-- **[README complet](docs/README.md)** - Architecture et fonctionnalités
+- **[Architecture Technique](docs/ARCHITECTURE.md)** - Protocoles, flux de données, sécurité
 - **[Guide de déploiement](docs/DEPLOYMENT.md)** - Instructions détaillées
+- **[Troubleshooting](docs/TROUBLESHOOTING.md)** - Diagnostic et maintenance
+- **[README complet](docs/README.md)** - Fonctionnalités et structure
 
 ## 🌐 Services
 
